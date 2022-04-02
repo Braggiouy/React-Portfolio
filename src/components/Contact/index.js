@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
-import { useRef } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const refForm = useRef()
 
   useEffect(() => {
     return setTimeout(() => {
@@ -26,9 +24,8 @@ const Contact = () => {
             />
           </h1>
           <p>
-            I am interested in freelance opportunities - especially ambitious or
-            large projects. However, if you have other request or question,
-            don't hesitate to contact me using below form either.
+            if you have other request or question, don't hesitate to contact me
+            using below form either.
           </p>
           <div className="contact-form">
             <form>
