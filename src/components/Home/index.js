@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 import LogoTitle from '../../assets/images/B-logos_white.png'
+
+// COMPONENTS
 import AnimatedLetters from '../../components/AnimatedLetters/index.js'
 
 const Home = () => {
@@ -26,7 +28,7 @@ const Home = () => {
   ]
 
   useEffect(() => {
-    return setTimeout(() => {
+    setTimeout(() => {
       setLetterClass('text-animate-hover')
     }, 4000)
   }, [])
