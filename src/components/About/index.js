@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import Loader from 'react-loaders'
+
 import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -73,6 +75,7 @@ function About() {
           </div>
         </div>
       </div>
+      <Loader type="pacman" />
     </>
   )
 }
