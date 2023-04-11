@@ -57,7 +57,7 @@ const Sidebar = () => {
           <a
             target="_blank"
             rel="noreferrer"
-            href="https://www.linkedin.com/in/bruno-aggierni/"
+            href="https://github.com/Braggiouy"
           >
             <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
           </a>
