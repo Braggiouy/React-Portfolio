@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
-import { useRef } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const refForm = useRef()
 
   useEffect(() => {
     return setTimeout(() => {
