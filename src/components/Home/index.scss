@@ -8,6 +8,16 @@
     max-height: 90%;
   }
 
+  .football-score {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    max-height: 90%;
+    text-align: right;
+  }
+
   h1 {
     color: #fff;
     font-size: 53px;
