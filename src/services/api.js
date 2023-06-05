@@ -1,23 +1,17 @@
 // api.js
 
-// TODO
-// Getting a 403 error, eventhough apikey is the correct one, check this out.
 export const fetchLiveResultsAndFixtures = async () => {
   const response = await fetch(
-    process.env.REACT_APP_BASE_URL + '/competitions/PL',
+    process.env.REACT_APP_USELESSFACTS_BASE_URL +
+      process.env.REACT_APP_USELESSFACTS_RANDOM_ENDPOINT,
     {
-      headers: {
-        'X-Auth-Token': process.env.REACT_APP_API_KEY,
-      },
+      method: 'GET',
     }
   )
 
   if (!response.ok) {
-    throw new Error('Failed to fetch live results and fixtures')
+    throw new Error('Failed to fetch random useless fact')
   }
 
-  // Since the response is opaque, you won't have direct access to response body or headers.
-  // You may need to handle the response differently, depending on your use case.
-
-  return response // Return the response object
+  return response.json() // Return the response object
 }

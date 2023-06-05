@@ -8,14 +8,24 @@
     max-height: 90%;
   }
 
-  .football-score {
+  .random-fact-box {
     position: absolute;
     right: 10%;
     top: 50%;
     transform: translateY(-50%);
     width: 40%;
     max-height: 90%;
-    text-align: right;
+    text-align: center;
+    font-size: 53px;
+    font-family: 'Coolvetica';
+    font-weight: 400;
+
+    .random-fact-text {
+      text-align: center;
+      font-size: 15px;
+      margin: 0;
+      padding: 0;
+    }
   }
 
   h1 {
@@ -63,7 +73,7 @@ h2 {
   color: #adadad;
   margin-top: 20px;
   font-weight: 400;
-  font-size: 11px;
+  font-size: 15px;
   font-family: sans-serif;
   letter-spacing: 3px;
   animation: fadeIn 1s 1.8s backwards;

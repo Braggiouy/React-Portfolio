@@ -10,7 +10,7 @@ import AnimatedLetters from '../../components/AnimatedLetters/index.js'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const [results, setResults] = useState([])
+  const [result, setResult] = useState('')
 
   const nameArray = ['r', 'u', 'n', 'o']
   const jobArray = [
@@ -45,25 +45,35 @@ const Home = () => {
       setLetterClass('text-animate-hover')
     }, 4000)
 
-    const fetchResults = async () => {
+    const fetchRandomFact = async () => {
       try {
         const data = await fetchLiveResultsAndFixtures()
-        console.log('data', data)
-        setResults(data)
+        setResult(data.text)
       } catch (error) {
         console.error('Error fetching live results and fixtures:', error)
       }
     }
 
-    fetchResults()
+    fetchRandomFact()
   }, [])
 
   return (
     <>
       <div className="container home-page">
-        // TODO
-        {/* Work around the table for the live scores related to fav teams. .football_score classname tag */}
-        <div className="football-score"></div>
+        <div className="random-fact-box">
+          <span className={letterClass}>R</span>
+          <span className={letterClass}>A</span>
+          <span className={letterClass}>N</span>
+          <span className={letterClass}>D</span>
+          <span className={letterClass}>O</span>
+          <span className={letterClass}>M</span>
+          <span className={letterClass}> </span>
+          <span className={letterClass}>F</span>
+          <span className={letterClass}>A</span>
+          <span className={letterClass}>C</span>
+          <span className={letterClass}>T</span>
+          <h2 className="random-fact-text">{result}</h2>
+        </div>
         <div className="text-zone">
           <h1>
             <span className={letterClass}>H</span>
